@@ -1,0 +1,26 @@
+{
+  "name": "backbone.transceiver",
+  "main": "backbone.transceiver.js",
+  "version": "0.1",
+  "homepage": "https://github.com/vsaar/backbone.transceiver",
+  "authors": [
+    "Victor Saar <work@victor-saar.de>"
+  ],
+  "description": "Backbone plugin simplifying use of Backbone.Radio",
+  "keywords": [
+    "backbone",
+    "radio",
+    "marionette"
+  ],
+  "license": "Apache 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      "marionette": "~2"
+  }
+}
