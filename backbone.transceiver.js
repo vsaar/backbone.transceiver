@@ -25,7 +25,8 @@
             var channel = Radio.channel(channelName),
                 replies = _.result(channelOptions, 'reply', {}),
                 complies = _.result(channelOptions, 'comply', {}),
-                requests = _.result(channelOptions, 'request', {});
+                requests = _.result(channelOptions, 'request', {}),
+                events = _.result(channelOptions, 'events', {});
 
             // register request handlers
             _.each(replies, function(response, request) {
@@ -48,6 +49,13 @@
                         return channel.request(request);
                     }
                 });
+            });
+
+            // register event handlers
+            _.each(events, function(response, event) {
+                var result = _.isFunction(response) ? _.bind(response, obj) : obj[response];
+
+                obj.listenTo(channel, event, result);
             });
 
             // store channel reference
