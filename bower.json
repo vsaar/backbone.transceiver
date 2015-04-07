@@ -1,7 +1,7 @@
 {
   "name": "backbone.transceiver",
   "main": "backbone.transceiver.js",
-  "version": "0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/vsaar/backbone.transceiver",
   "authors": [
     "Victor Saar <work@victor-saar.de>"
